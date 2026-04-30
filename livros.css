@@ -1,0 +1,642 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+    background: linear-gradient(135deg, #1c2d28, #1E3D34);
+    font-family: Georgia, serif;
+    margin: 0;
+   
+}
+
+.container-site {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+header{
+    width: 100%;
+}
+
+
+
+h1 {
+    color: rgb(223, 160, 3);
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #f4d78a;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 35px;
+
+}
+
+
+h3 {
+    color: #C6A75E;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+
+
+h5 {
+    color: #C6A75E;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+
+h6{
+    color: #C6A75E;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.intro {
+  max-width: 800px;
+  margin: 70px auto 60px; /* espaço por causa do menu fixo */
+  text-align: center;
+  color: #f5d78e;
+  font-size: 19px;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0 auto 20px auto;
+}
+
+
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  max-width: 600px;
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+button{
+    background-color: rgb(226, 199, 67) ;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: rgb(115, 92, 45);
+    
+}
+
+p:nth-of-type(odd) {
+    color: #EDE6D6; /* bege claro */
+}
+
+p:nth-of-type(even) {
+    color: #C6A75E; /* dourado */
+}
+
+
+.lista-livros {
+    list-style: none;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+    counter-reset: contador;
+}
+
+.lista-livros li {
+    counter-increment: contador;
+}
+
+
+.lista-livros a {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 0.3s;
+}
+
+
+.lista-livros a::before {
+    content: counter(contador);
+    position: absolute;
+    left: -30px;
+    top: 50px;
+    color: gold;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.lista-livros h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+
+.lista-livros p {
+    margin: 0;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.lista-livros a:hover {
+    background: linear-gradient(90deg, #111, #1a1a1a);
+    padding-left: 25px;
+}
+
+.banner-livros {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.banner-livros img {
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(24, 22, 11, 0.858);
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+.personagem-card {
+    background-color: rgba(15, 30, 26, 0.9);
+    border: 2px solid #C6A75E;
+    border-radius: 15px;
+    width: 260px;
+    padding: 20px;
+    text-align: center;
+}
+
+.personagem-card:nth-child(1),
+.personagem-card:nth-child(2) {
+    margin-bottom: 25px;
+}
+
+.personagem-card:nth-child(2)::after {
+    content: "";
+    flex-basis: 100%;
+}
+
+
+.personagem-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.personagem-card h5 {
+    color: #C6A75E;
+    margin-bottom: 10px;
+}
+
+.personagem-card p {
+    color: #EDE6D6;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.personagem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(198, 167, 94, 0.5);
+}
+
+
+
+#livro1,
+#livro2,
+#livro3,
+#livro4,
+#livro5,
+#livro6 {
+    scroll-margin-top: 100px;
+}
+
+
+.navbar {
+    background-color: #0f1111;
+    padding: 15px 0;
+    border-bottom: 2px solid #C6A75E;
+    
+}
+
+
+
+.nav-link {
+    color: #EDE6D6 !important;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #C6A75E !important;
+}
+
+
+
+section{
+padding: 80px 20px;
+max-width: 800px;
+margin: 0 auto;
+
+}
+
+#home p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+form{
+ display: flex;
+ flex-direction: column;
+ max-width: 400px;
+ margin: auto;
+}
+
+form label{
+text-align: left;
+color: #C6A75E;
+margin-top: 10px;
+font-weight: bold;
+}
+
+form input, form textarea{
+padding: 10x;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+form button{
+background:  #0F1E1A;;
+padding: 10px;
+cursor: pointer;
+border-radius: 5px;
+
+}
+
+form button:hover{
+background: #C6A75E;
+}
+
+h5{
+    color: #C6A75E;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+
+
+footer {
+     background: linear-gradient(135deg, #1c2d28, #1E3D34);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #00bcd4;
+}
+
+footer p:last-child {
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+
+#formulario {
+    text-align: center;
+    margin: 80px 0;
+    padding: 60px 20px;
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 20px;
+}
+
+
+#formulario h3 {
+    color: gold;
+    margin-bottom: 30px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+
+.form-elfhame {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+
+    animation: aparecer 1s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.form-elfhame label {
+    text-align: left;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.form-elfhame input,
+.form-elfhame textarea {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #333;
+
+    background-color: #021806;
+    color: white;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.form-elfhame input:focus,
+.form-elfhame textarea:focus {
+    outline: none;
+    border-color: gold;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+
+.form-elfhame textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+
+.form-elfhame button {
+    margin-top: 10px;
+
+    background: linear-gradient(135deg, gold, #d4af37);
+    color: black;
+
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.form-elfhame button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+
+.form-elfhame button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px gold;
+}
+
+
+.mensagem-sucesso {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    color: gold;
+    font-size: 14px;
+}
+
+
+.form-elfhame:valid .mensagem-sucesso {
+    opacity: 1;
+    max-height: 50px;
+    margin-top: 10px;
+}
+
+
+.footer-elfhame {
+    text-align: center;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 40px 20px;
+    margin-top: 60px;
+
+    background: none;
+    outline: none;
+}
+
+
+.linha {
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        gold,
+        transparent
+    );
+    margin: 0 auto 25px auto;
+    opacity: 0.6;
+}
+
+.frase {
+    font-style: italic;
+    color: gold;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+
+ .elfhame-section {
+  margin-top: 40px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #f5d78e;
+}
+
+/* MAPA */
+.mapa-container {
+  position: relative;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.mapa {
+  width: 80%;
+  border: 3px solid #c9a44c;
+  border-radius: 10px;
+}
+
+
+.ponto {
+    position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ac9204b7;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffd700;
+}
+
+
+
+
+.ponto span {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1b2b23;
+  color: #f5d78e;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.ponto:hover span {
+  display: block;
+}
+
+
+.tabela-elfhame {
+  margin: 40px auto;
+  width: 85%;
+  border-collapse: collapse;
+  background: #1b2b23; 
+  color:#eae2bf;
+}
+
+.tabela-elfhame th,
+.tabela-elfhame td {
+  border: 1px solid #c9a44c;
+  padding: 12px;
+}
+
+.tabela-elfhame th {
+  background: #2e463a;
+}
+
+.tabela-elfhame tr:hover {
+  background: #2a3f35;
+}
+
+
+.regiao {
+  background: #3a5a4a;
+  font-weight: bold;
+  color: #ffe8a3;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+.detalhes-livros div{
+    margin-bottom: 60px;
+    text-align: justify;
+}
+
+.detalhes-livros img {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.detalhes-livros h3 {
+    margin-bottom: 20px;
+}
+
+/* mobile */
+@media (max-width: 1000px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+}
